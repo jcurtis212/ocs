@@ -182,7 +182,7 @@ function moveAuthor(dir, authorIndex) {
 </div>
 <div class="separator"></div>
 
-<div id="title">
+<div id="titleAndAbstract">
 {if $collectAbstracts}
 	<h3>{translate key="submission.titleAndAbstract"}</h3>
 {else}
@@ -193,7 +193,7 @@ function moveAuthor(dir, authorIndex) {
 
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="title" required="true" key="paper.title"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="60" maxlength="255" /></td>
+	<td width="80%" class="value"><textarea name="title[{$formLocale|escape}]" id="title" class="textArea" rows="1" cols="60">{$title[$formLocale]|escape}</textarea></td>
 </tr>
 
 {if $collectAbstracts}
